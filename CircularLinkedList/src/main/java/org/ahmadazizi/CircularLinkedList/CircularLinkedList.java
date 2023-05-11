@@ -1,6 +1,10 @@
+package main.java.org.ahmadazizi.CircularLinkedList;
+
 import java.util.ArrayList;
 
 public class CircularLinkedList<T> {
+
+
 	private Node<T> first = null;
 
 	public T deleteFirst() {
@@ -91,6 +95,7 @@ public class CircularLinkedList<T> {
 	public void changeFirst(T input) {
 		first.data = input;
 	}
+
 	//ok-f
 	public void addAtFirst(T input) {
 		if(first == null) {
@@ -108,8 +113,9 @@ public class CircularLinkedList<T> {
 			node.next = first;
 			end.next = node;
 			first = node;
+		}
 	}
-	}
+
 	//ok-f
 	public void addAtLast(T input) {
 		if(first == null) {
@@ -150,6 +156,7 @@ public class CircularLinkedList<T> {
 			}
 		}
 	}
+
 	//ok-f
 	public void print() {
 		Node<T> node = first;
@@ -158,6 +165,7 @@ public class CircularLinkedList<T> {
 			node = node.next;
 		}while(node != first);
 	}
+
 	//ok-f
 	public void printFirst() {
 		System.out.println(first.data);
@@ -207,24 +215,24 @@ public class CircularLinkedList<T> {
 		}
 	}
 //ok-f
-	public ArrayList<T> toArrayList(){
-		ArrayList<T> arrayList = new ArrayList<T>();
-		if(first == null)
-			return null;
-		else if(first.next == first) {
-			arrayList.add(first.data);
-			return arrayList;
-		}else {
-			Node<T> node = first;
-			ArrayList<T> result = new ArrayList<T>();
-			result.add(first.data);
-			while(node.next != first){
-				node = node.next;
-				result.add(node.data);
-			}
-			return result;
+public ArrayList<T> toArrayList(){
+	ArrayList<T> arrayList = new ArrayList<T>();
+	if(first == null)
+		return null;
+	else if(first.next == first) {
+		arrayList.add(first.data);
+		return arrayList;
+	}else {
+		Node<T> node = first;
+		ArrayList<T> result = new ArrayList<T>();
+		result.add(first.data);
+		while(node.next != first){
+			node = node.next;
+			result.add(node.data);
 		}
+		return result;
 	}
+}
 	//ok-f
 
 	public void removeDuplicates() {
@@ -248,17 +256,17 @@ public class CircularLinkedList<T> {
 		first = null;
 	}
 //ok-f
-	public Node<T> getFirst() {
-		return first;
-	}
+public Node<T> getFirst() {
+	return first;
+}
 //ok-f
-	public Node<T> getLast(){
-		Node<T> node = first;
-		while (node.next != first){
-			node = node.next;
-		}
-		return node;
+public Node<T> getLast(){
+	Node<T> node = first;
+	while (node.next != first){
+		node = node.next;
 	}
+	return node;
+}
 //ok-f
 
 	public void merge(CircularLinkedList<T> input){
