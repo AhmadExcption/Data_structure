@@ -1,4 +1,4 @@
-package main.java.org.ahmadazizi.CircularLinkedList;
+package main.java.org.ahmadazizi.CLL;
 
 import java.util.ArrayList;
 

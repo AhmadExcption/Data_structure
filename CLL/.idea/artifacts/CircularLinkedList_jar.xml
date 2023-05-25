@@ -3,7 +3,7 @@
     <output-path>$PROJECT_DIR$/out/artifacts/CircularLinkedList_jar</output-path>
     <root id="root">
       <element id="archive" name="CircularLinkedList.jar">
-        <element id="module-output" name="CircularLinkedList" />
+        <element id="module-output" name="CLL" />
       </element>
     </root>
   </artifact>
